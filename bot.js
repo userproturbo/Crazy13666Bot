@@ -46,6 +46,10 @@ bot.on('text', (ctx) => {
 // Команда /start (если писать в ЛС)
 bot.start((ctx) => ctx.reply("Я бот вашей группы! Добавьте меня в чат и сделайте админом 🛠"));
 
+bot.catch((err, ctx) => {
+  console.error("Bot error:", err.description);
+});
+
 // Запуск
-bot.launch();
+bot.launch({ dropPendingUpdates: true });
 console.log("Бот запущен 🤖");
