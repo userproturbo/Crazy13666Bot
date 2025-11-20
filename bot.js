@@ -4,9 +4,6 @@ const { Telegraf } = require("telegraf");
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
 // ======================= ЛОГИ ==========================
-console.log("OWNER_ID:", process.env.OWNER_ID);
-console.log("CHANNEL_ID:", process.env.CHANNEL_ID);
-console.log("THREAD_CHAT_ID:", process.env.THREAD_CHAT_ID);
 
 // ======================= /post ==========================
 bot.command("post", async (ctx) => {
